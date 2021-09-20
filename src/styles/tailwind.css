@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .row {
+    --row-x: 1rem;
+    --row-y: 1rem;
+    --cols-w: 100%;
+
+    @apply flex flex-wrap;
+
+    margin-left: calc(var(--row-x) / -1);
+    margin-right: calc(var(--row-x) / -1);
+    margin-top: calc(var(--row-y) / -1);
+  }
+
+  .row > * {
+    padding: var(--row-y) var(--row-x) 0 var(--row-x);
+    width: var(--cols-w);
+  }
+
+  .col {
+    padding: var(--row-y) var(--row-x) 0 var(--row-x);
+  }
+}

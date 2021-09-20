@@ -1,0 +1,16 @@
+.row.gap-lg {
+  margin-right: -3rem;
+  margin-left: -3rem;
+  & .col {
+    padding: 0 3rem;
+  }
+}
+
+.col {
+  padding: 0 1rem;
+  @screen phone {
+    & + .col {
+      margin-top: 2rem;
+    }
+  }
+}
